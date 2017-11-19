@@ -11,7 +11,7 @@ var Account = new Schema({
     password: {type:String, require: true},
     balance: {type: Number}
 });
-Account.pre(save, function(next) {
+Account.pre('save', function(next) {
     var user = this;
 
 // only hash the password if it has been modified (or is new)

@@ -6,9 +6,10 @@ var Schema = mongoose.Schema;
 var ObjectId = Schema.ObjectId;
 
 var Transaction  = new Schema({
-    sender : {type: String},
-    receiver : {type: String},
-    value: {type:Number}
+    sender : {type: String , require: true},
+    receiver : {type: String,require: true},
+    value: {type: Number, require: true},
+    time: {type: Date, default: Date.now}
 });
 
-module.exports = mongoose.Schema("Transaction",Transaction);
+module.exports = mongoose.model("Transaction",Transaction);

@@ -19,7 +19,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 //connect mongoose
-mongoose.connect('mongodb://localhost/shop',{useMongoClient: true});
+mongoose.connect('mongodb://localhost/internet_banking',{useMongoClient: true});
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
