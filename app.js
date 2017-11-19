@@ -19,7 +19,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 //connect mongoose
-mongoose.connect('mongodb://localhost/internet_banking',{useMongoClient: true});
+mongoose.connect("mongodb://dienvt:dien_123456@cluster0-shard-00-00-ep97f.mongodb.net:27017,cluster0-shard-00-01-ep97f.mongodb.net:27017,cluster0-shard-00-02-ep97f.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin",{useMongoClient: true});
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 

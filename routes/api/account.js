@@ -14,8 +14,10 @@ router.post('/register', function(req, res, next) {
     });
     newAccount.save(function (err) {
         if(err) {
+            throw err;
             res.sendStatus(404);
         }else{
+
             var id = Account.findOne({'username': newAccount.username}, function (err, doc) {
                 if(err) res.sendStatus(404);
                 else{
