@@ -14,5 +14,9 @@
     "mongoose": "^4.13.3",
     "morgan": "~1.9.0",
     "serve-favicon": "~2.4.5"
+  },
+  "engines": {
+    "node": ">=4.3 <7.0",
+    "npm": ">=1.0.0"
   }
 }
