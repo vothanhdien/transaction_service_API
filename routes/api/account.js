@@ -14,7 +14,6 @@ router.post('/register', function(req, res, next) {
     });
     newAccount.save(function (err) {
         if(err) {
-            throw err;
             res.sendStatus(404);
         }else{
 
