@@ -20,7 +20,31 @@ router.post('/register', function(req, res, next) {
             var id = Account.findOne({'username': newAccount.username}, function (err, doc) {
                 if(err) res.sendStatus(404);
                 else{
-                    res.json(doc.id);
+                    res.json({
+                        status:'success',
+                        message: doc.id});
+                }
+            });
+        }
+    });
+});
+router.post('/register', function(req, res, next) {
+    var newAccount = new Account({
+        username: req.body.username,
+        password: req.body.password,
+        balance: 2000
+    });
+    newAccount.save(function (err) {
+        if(err) {
+            res.sendStatus(404);
+        }else{
+
+            var id = Account.findOne({'username': newAccount.username}, function (err, doc) {
+                if(err) res.sendStatus(404);
+                else{
+                    res.json({
+                        status:'success',
+                        message: doc.id});
                 }
             });
         }
@@ -37,10 +61,25 @@ router.post('/login', function(req, res, next) {
             account.comparePassword(userAccount.password,function (err, isMath) {
                if(err) return res.sendStatus(404);
                if(isMath)
-                   res.json(account.id);
+                   res.json({
+                       status:'success',
+                       message: account.id});
                else
-                    res.json("password uncorrect");
+                    res.json({
+                        status: 'fail',
+                        message: "password uncorrect"
+                    });
             });
+        }
+    });
+});
+router.post('/search', function(req, res, next) {
+    var id = Account.findById(req.body.userId, function (err, doc) {
+        if(err) res.sendStatus(404);
+        else{
+            res.json({
+                status:'success',
+                message: doc.balance});
         }
     });
 });

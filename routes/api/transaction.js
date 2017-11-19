@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
     res.sendStatus(200);
 });
 router.get('/search',function (req, res, next) {
-
+    // console.log(req.query);
     //cung cap tat ca cac kieu seach
     //search ban Id
     if(req.query.id !== undefined){
@@ -28,12 +28,13 @@ router.get('/search',function (req, res, next) {
     }
     //search nguoi nhan
     else if(req.query.receiver !== undefined){
-        Transaction.find({'receiver': req.query.sender}, function (err, docs) {
+        Transaction.find({'receiver': req.query.receiver}, function (err, docs) {
             if(err) return res.sendStatus(404);
             return res.json(docs);
         });
+    }else{
+        return res.sendStatus(404);
     }
-    return res.sendStatus(404);
 });
 router.post('/transact', function (req, res, next) {
     var newTransaction =  new Transaction({
