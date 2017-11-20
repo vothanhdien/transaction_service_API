@@ -58,18 +58,26 @@ router.post('/login', function(req, res, next) {
     Account.findOne({'username' : userAccount.username},function (err,account) {
         if(err) return res.sendStatus(404);
         else{
-            account.comparePassword(userAccount.password,function (err, isMath) {
-               if(err) return res.sendStatus(404);
-               if(isMath)
-                   res.json({
-                       status:'success',
-                       message: account.id});
-               else
-                    res.json({
-                        status: 'fail',
-                        message: "password uncorrect"
-                    });
-            });
+            if(account !== null) {
+                account.comparePassword(userAccount.password, function (err, isMath) {
+                    if (err) return res.sendStatus(404);
+                    if (isMath)
+                        res.json({
+                            status: 'success',
+                            message: account.id
+                        });
+                    else
+                        res.json({
+                            status: 'fail',
+                            message: "username or password uncorrect"
+                        });
+                });
+            }else{
+                res.json({
+                    status: 'fail',
+                    message: "username or password uncorrect"
+                });
+            }
         }
     });
 });
