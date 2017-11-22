@@ -12,12 +12,18 @@ router.post('/register', function(req, res, next) {
         password: req.body.password,
         balance: 2000
     });
-    if(false){
-        //check email
+    if(newAccount.email.indexOf("@") < 0 || newAccount.email.indexOf("@") !== newAccount.email.lastIndexOf("@")){
+        res.json({
+            status: 'fail',
+            message: "email not correct"
+        })
     }else {
         newAccount.save(function (err) {
             if (err) {
-                res.sendStatus(404);
+                res.json({
+                    status: 'fail',
+                    message: "email already exist"
+                })
             } else {
 
                 var id = Account.findOne({'email': newAccount.email}, function (err, doc) {
@@ -61,7 +67,12 @@ router.post('/login', function(req, res, next) {
         password: req.body.password
     };
     Account.findById(userAccount.userId,function (err,account) {
-        if(err) return res.sendStatus(404);
+        if(err) {
+            res.json({
+                status: 'fail',
+                message: 'Wallet ID not found'
+            });
+        }
         else{
             if(account !== null) {
                 account.comparePassword(userAccount.password, function (err, isMath) {

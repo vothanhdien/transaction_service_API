@@ -68,7 +68,7 @@ router.post('/transact', function (req, res, next) {
         message: ""
     };
     //tim nguoi nhan
-    Account.findOne({username: newTransaction.receiver}, function (err, receiver) {
+    Account.findById(newTransaction.receiver, function (err, receiver) {
         if(err) {
             res.status(404);
         }
