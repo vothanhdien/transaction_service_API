@@ -7,7 +7,7 @@ var Schema = mongoose.Schema,
     SALT_WORK_FACTOR = 10;
 
 var Account = new Schema({
-    username: {type: String, require: true, index: {unique: true}},
+    email: {type:String,require: true, index:{unique:true}},
     password: {type:String, require: true},
     balance: {type: Number}
 });
