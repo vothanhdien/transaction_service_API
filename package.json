@@ -15,6 +15,7 @@
     "mongoose": "^4.13.3",
     "morgan": "~1.9.0",
     "node-gyp": "^3.6.2",
+    "node-pre-gyp": "^0.6.39",
     "serve-favicon": "~2.4.5"
   },
   "engines": {

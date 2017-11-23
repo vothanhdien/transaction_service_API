@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29afa62c-9173-41e3-8709-81633c39625c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="29afa62c-9173-41e3-8709-81633c39625c" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -53,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/bin/www">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="67" column="60" lean-forward="true" selection-start-line="67" selection-start-column="60" selection-end-line="67" selection-end-column="60" />
+              <caret line="67" column="60" lean-forward="false" selection-start-line="67" selection-start-column="60" selection-end-line="67" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -63,9 +61,9 @@
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+              <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
               <folding>
-                <marker date="1511452258618" expanded="true" signature="148:415" ph="{&quot;bcrypt&quot;: &quot;^1.0.3&quot;...}" />
+                <marker date="1511452406548" expanded="true" signature="148:446" ph="{&quot;bcrypt&quot;: &quot;^1.0.3&quot;...}" />
               </folding>
             </state>
           </provider>
@@ -405,12 +403,12 @@
       <workItem from="1511333583474" duration="1282000" />
       <workItem from="1511366386866" duration="4565000" />
       <workItem from="1511446575415" duration="1667000" />
-      <workItem from="1511452024110" duration="242000" />
+      <workItem from="1511452024110" duration="388000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58545000" />
+    <option name="totallyTimeSpent" value="58691000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -451,7 +449,7 @@
         <state relative-caret-position="272">
           <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
           <folding>
-            <marker date="1511452258618" expanded="true" signature="148:415" ph="{&quot;bcrypt&quot;: &quot;^1.0.3&quot;...}" />
+            <marker date="1511452406548" expanded="true" signature="148:446" ph="{&quot;bcrypt&quot;: &quot;^1.0.3&quot;...}" />
           </folding>
         </state>
       </provider>
@@ -820,9 +818,9 @@
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
           <folding>
-            <marker date="1511452258618" expanded="true" signature="148:415" ph="{&quot;bcrypt&quot;: &quot;^1.0.3&quot;...}" />
+            <marker date="1511452406548" expanded="true" signature="148:446" ph="{&quot;bcrypt&quot;: &quot;^1.0.3&quot;...}" />
           </folding>
         </state>
       </provider>
@@ -876,7 +874,7 @@
     <entry file="file://$PROJECT_DIR$/bin/www">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="67" column="60" lean-forward="true" selection-start-line="67" selection-start-column="60" selection-end-line="67" selection-end-column="60" />
+          <caret line="67" column="60" lean-forward="false" selection-start-line="67" selection-start-column="60" selection-end-line="67" selection-end-column="60" />
           <folding />
         </state>
       </provider>
